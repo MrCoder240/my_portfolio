@@ -251,6 +251,56 @@ section {
     margin: 3px 0;
     transition: var(--transition);
 }
+/* Logo Styles */
+.brand-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px;
+}
+
+.logo-container {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--primary-color);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.nav-logo {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+/* Hover effects for logo */
+.brand-link:hover .logo-container {
+    transform: scale(1.1);
+    box-shadow: var(--shadow);
+    border-color: var(--accent-color);
+}
+
+.brand-link:hover .nav-logo {
+    transform: rotate(10deg);
+}
+
+.brand-link span {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.brand-link:hover span {
+    color: var(--primary-color);
+}
 
 /* Hero Section */
 .hero {
@@ -805,5 +855,36 @@ section {
     
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .brand-link span {
+        font-size: 1.5rem;
+    }
+    
+    .logo-container {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .nav-logo {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .brand-link span {
+        font-size: 1.3rem;
+    }
+    
+    .logo-container {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .nav-logo {
+        width: 25px;
+        height: 25px;
     }
 }
